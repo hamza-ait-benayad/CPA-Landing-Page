@@ -1,0 +1,194 @@
+export interface Game {
+  id: string
+  title: string
+  description: string
+  shortDescription: string
+  thumbnail: string
+  genre: string
+  rating: number
+  reviews: number
+  features: string[]
+  downloadUrl: string
+  screenshots: string[]
+  heroImage: string
+  systemRequirements: {
+    os: string
+    processor: string
+    memory: string
+    storage: string
+  }
+  releaseDate: string
+  developer: string
+  publisher: string
+}
+
+export const gamesData: Game[] = [
+  {
+    id: "dragon-quest",
+    title: "Dragon Quest: Legends",
+    shortDescription: "Epic fantasy RPG with stunning graphics",
+    description:
+      "Embark on an epic adventure in a magical world filled with dragons, treasures, and legendary battles. Dragon Quest: Legends combines classic RPG gameplay with modern graphics.",
+    thumbnail: "/dragon-quest-game-thumbnail.jpg",
+    genre: "RPG",
+    rating: 4.8,
+    reviews: 2543,
+    features: ["Open World", "Co-op Multiplayer", "Dynamic Weather", "Skill Trees"],
+    downloadUrl: "#download",
+    screenshots: ["/dragon-quest-screenshot-1.jpg", "/dragon-quest-screenshot-2.jpg", "/dragon-quest-screenshot-3.jpg"],
+    heroImage: "/dragon-quest-hero.jpg",
+    systemRequirements: {
+      os: "Windows 10/11, macOS 10.15+",
+      processor: "Intel i5 or AMD Ryzen 5",
+      memory: "8GB RAM",
+      storage: "50GB SSD",
+    },
+    releaseDate: "2024-01-15",
+    developer: "Fantasy Studios",
+    publisher: "Epic Games",
+  },
+  {
+    id: "cyber-runner",
+    title: "Cyber Runner: Neon City",
+    shortDescription: "Fast-paced action game in a cyberpunk world",
+    description:
+      "Race through neon-lit streets in this high-octane action game. Cyber Runner combines parkour mechanics with intense combat in a dystopian future.",
+    thumbnail: "/cyber-runner-game-thumbnail.jpg",
+    genre: "Action",
+    rating: 4.6,
+    reviews: 1892,
+    features: ["Parkour Mechanics", "Customizable Characters", "Online Leaderboards", "Story Campaign"],
+    downloadUrl: "#download",
+    screenshots: ["/cyber-runner-screenshot-1.jpg", "/cyber-runner-screenshot-2.jpg", "/cyber-runner-screenshot-3.jpg"],
+    heroImage: "/cyber-runner-hero.jpg",
+    systemRequirements: {
+      os: "Windows 10/11, Linux",
+      processor: "Intel i7 or AMD Ryzen 7",
+      memory: "16GB RAM",
+      storage: "60GB SSD",
+    },
+    releaseDate: "2024-02-20",
+    developer: "Neon Digital",
+    publisher: "Steam",
+  },
+  {
+    id: "puzzle-master",
+    title: "Puzzle Master: Brain Challenge",
+    shortDescription: "Mind-bending puzzle game for all ages",
+    description:
+      "Challenge your brain with hundreds of unique puzzles. Puzzle Master offers relaxing gameplay with increasing difficulty levels perfect for casual and hardcore gamers.",
+    thumbnail: "/puzzle-master-game-thumbnail.jpg",
+    genre: "Puzzle",
+    rating: 4.7,
+    reviews: 3421,
+    features: ["500+ Levels", "Daily Challenges", "Achievements", "Offline Play"],
+    downloadUrl: "#download",
+    screenshots: ["/puzzle-master-screenshot-1.jpg", "/puzzle-master-screenshot-2.jpg", "/puzzle-master-screenshot-3.jpg"],
+    heroImage: "/puzzle-master-hero.jpg",
+    systemRequirements: {
+      os: "Windows 7+, macOS 10.12+, Linux",
+      processor: "Intel i3 or AMD Ryzen 3",
+      memory: "4GB RAM",
+      storage: "2GB SSD",
+    },
+    releaseDate: "2023-11-10",
+    developer: "Brain Games Inc",
+    publisher: "Indie Games",
+  },
+  {
+    id: "space-odyssey",
+    title: "Space Odyssey: Infinite Frontier",
+    shortDescription: "Explore the vast universe in this space adventure",
+    description:
+      "Travel across galaxies, discover alien civilizations, and uncover the mysteries of the universe. Space Odyssey offers immersive exploration and strategic gameplay.",
+    thumbnail: "/placeholder.svg?height=300&width=400",
+    genre: "Adventure",
+    rating: 4.9,
+    reviews: 2156,
+    features: ["Procedural Galaxies", "Ship Customization", "Trading System", "PvP Battles"],
+    downloadUrl: "#download",
+    screenshots: [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+    ],
+    heroImage: "/placeholder.svg?height=800&width=1600",
+    systemRequirements: {
+      os: "Windows 10/11, macOS 11+",
+      processor: "Intel i9 or AMD Ryzen 9",
+      memory: "32GB RAM",
+      storage: "100GB SSD",
+    },
+    releaseDate: "2024-03-05",
+    developer: "Cosmic Games",
+    publisher: "AAA Studios",
+  },
+  {
+    id: "fantasy-quest",
+    title: "Fantasy Quest: Kingdoms",
+    shortDescription: "Build and manage your own fantasy kingdom",
+    description:
+      "Construct buildings, recruit heroes, and defend your kingdom from invaders. Fantasy Quest combines strategy and RPG elements in an immersive medieval world.",
+    thumbnail: "/placeholder.svg?height=300&width=400",
+    genre: "Strategy",
+    rating: 4.5,
+    reviews: 1734,
+    features: ["Kingdom Building", "Hero Collection", "Alliance Wars", "Resource Management"],
+    downloadUrl: "#download",
+    screenshots: [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+    ],
+    heroImage: "/placeholder.svg?height=800&width=1600",
+    systemRequirements: {
+      os: "Windows 8+, macOS 10.13+, iOS 12+, Android 8+",
+      processor: "Dual Core 2GHz",
+      memory: "2GB RAM",
+      storage: "1.5GB",
+    },
+    releaseDate: "2023-09-22",
+    developer: "Kingdom Games",
+    publisher: "Mobile First",
+  },
+  {
+    id: "racing-legends",
+    title: "Racing Legends: Speed Kings",
+    shortDescription: "High-speed racing with realistic physics",
+    description:
+      "Race against the world's best drivers on iconic tracks. Racing Legends features realistic physics, stunning visuals, and competitive multiplayer racing.",
+    thumbnail: "/placeholder.svg?height=300&width=400",
+    genre: "Racing",
+    rating: 4.7,
+    reviews: 2089,
+    features: ["50+ Tracks", "200+ Cars", "Online Multiplayer", "Career Mode"],
+    downloadUrl: "#download",
+    screenshots: [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+    ],
+    heroImage: "/placeholder.svg?height=800&width=1600",
+    systemRequirements: {
+      os: "Windows 10/11",
+      processor: "Intel i7 or AMD Ryzen 7",
+      memory: "16GB RAM",
+      storage: "80GB SSD",
+    },
+    releaseDate: "2024-01-30",
+    developer: "Speed Studios",
+    publisher: "Racing Games Inc",
+  },
+]
+
+export function getGameById(id: string): Game | undefined {
+  return gamesData.find((game) => game.id === id)
+}
+
+export function getAllGames(): Game[] {
+  return gamesData
+}
+
+export function getGamesByGenre(genre: string): Game[] {
+  return gamesData.filter((game) => game.genre === genre)
+}
