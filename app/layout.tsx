@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import OGAdsLocker from "@/components/ogads-locker"
 import "./globals.css"
 
 const geistSans = Geist({ subsets: ["latin"] })
@@ -87,7 +88,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${geistSans.className} antialiased`}>{children}</body>
+      <body className={`${geistSans.className} antialiased`}>
+        <OGAdsLocker />
+        {children}
+      </body>
     </html>
   )
 }

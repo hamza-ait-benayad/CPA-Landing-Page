@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Hero from "@/components/hero"
 import FeaturedGames from "@/components/featured-games"
+import FeaturedApps from "@/components/featured-apps"
 import GamePreview from "@/components/game-preview"
 import HowItWorks from "@/components/how-it-works"
 import Testimonials from "@/components/testimonials"
@@ -20,6 +21,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <FeaturedGames />
+      <FeaturedApps />
       <GamePreview />
       <HowItWorks />
       <Testimonials />

@@ -44,6 +44,16 @@ export default function Navigation() {
             >
               Games
             </Link>
+            <Link
+              href="/apps"
+              className={`text-sm font-medium transition-all duration-300 px-3 py-2 rounded-lg ${
+                isActive("/apps") || pathname.startsWith("/apps/")
+                  ? "text-accent bg-blue-500/20"
+                  : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+              }`}
+            >
+              Apps
+            </Link>
           </div>
         </div>
       </div>

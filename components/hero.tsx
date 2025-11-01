@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import DownloadButton from "@/components/download-button"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -11,17 +12,6 @@ export default function Hero() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-
-  const handleDownload = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "cpa_click", {
-        event_category: "engagement",
-        event_label: "hero_download",
-      })
-    }
-    // Redirect to CPA link
-    window.location.href = "https://your-cpa-link.com/download"
-  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-20 pb-20">
@@ -55,13 +45,14 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button
-                  onClick={handleDownload}
-                  size="lg"
-                  className="bg-primary hover:bg-primary-dark text-background font-bold text-lg px-8 py-6 rounded-full neon-glow transition-all duration-300 hover:scale-105"
-                >
-                  Download Now
-                </Button>
+                <div className="bg-primary hover:bg-primary-dark text-background font-bold text-lg px-8 py-6 rounded-full neon-glow transition-all duration-300 hover:scale-105 inline-flex items-center justify-center cursor-pointer">
+                  <DownloadButton
+                    downloadUrl="https://your-cpa-link.com/download"
+                    title="Ultimate Game"
+                    variant="hero"
+                    className="!bg-transparent !hover:bg-transparent !text-inherit !font-inherit !p-0 !w-auto !h-auto border-none shadow-none"
+                  />
+                </div>
                 <Link href="/games">
                   <Button
                     variant="outline"
