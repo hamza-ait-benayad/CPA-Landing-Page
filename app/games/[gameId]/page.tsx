@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: GameDetailsPageProps): Promis
   }
 
   return {
-    title: `${game.title} - Download & Play | CPA Gaming`,
+    title: `${game.title} Mod - Free Modded Download | freemods4u`,
     description: game.description,
     keywords: `${game.title}, ${game.genre}, game download, play ${game.title}`,
     openGraph: {
@@ -56,7 +56,7 @@ export default async function GameDetailsPage({ params }: GameDetailsPageProps) 
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-80 sm:h-96 md:h-[500px] overflow-hidden">
+      <section className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
         <Image
           src={game.heroImage || "/placeholder.svg"}
           alt={game.title}
@@ -69,51 +69,56 @@ export default async function GameDetailsPage({ params }: GameDetailsPageProps) 
 
         {/* Content Overlay */}
         <div className="absolute inset-0 flex items-end">
-          <div className="w-full px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+          <div className="w-full px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8">
+            <div className="flex flex-col gap-3 sm:gap-4">
               <div className="flex-1">
-                <div className="flex items-start gap-4 mb-3">
+                <div className="flex items-start gap-3 sm:gap-4 mb-2 sm:mb-3">
                   {/* Game Icon */}
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex-shrink-0 overflow-hidden rounded-xl border-2 border-background/20 shadow-lg">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex-shrink-0 overflow-hidden rounded-lg sm:rounded-xl border-2 border-background/20 shadow-lg">
                     <Image
                       src={game.thumbnail || "/placeholder.svg"}
                       alt={game.title}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
+                      sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, (max-width: 1024px) 96px, 112px"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-2 line-clamp-2">
+                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-1 sm:mb-2 line-clamp-2">
                       {game.title}
                     </h1>
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
-                      <div className="flex items-center gap-2">
-                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400 flex-shrink-0" />
-                        <span className="font-semibold">{game.rating}</span>
-                        <span className="text-muted-foreground text-sm">({game.reviews.toLocaleString()} reviews)</span>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1.5 sm:gap-2 lg:gap-4">
+                      <div className="flex items-center gap-1.5 sm:gap-2">
+                        <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400 flex-shrink-0" />
+                        <span className="font-semibold text-sm sm:text-base">{game.rating}</span>
+                        <span className="text-muted-foreground text-xs sm:text-sm">
+                          ({game.reviews.toLocaleString()})
+                        </span>
                       </div>
-                      <span className="text-xs sm:text-sm bg-accent/20 text-accent px-3 py-1 rounded-full">
+                      <span className="text-xs sm:text-sm bg-accent/20 text-accent px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                         {game.genre}
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <DownloadButton
-                downloadUrl={game.downloadUrl}
-                gameId={game.id}
-                title={game.title}
-                variant="hero"
-              />
+              <div className="w-full sm:w-auto">
+                <DownloadButton
+                  downloadUrl={game.downloadUrl}
+                  gameId={game.id}
+                  title={game.title}
+                  variant="hero"
+                  className="w-full sm:w-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-8 sm:py-12 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+      <section className="py-6 sm:py-8 md:py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {/* Left Column - Main Content */}
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             {/* Description */}
@@ -156,28 +161,6 @@ export default async function GameDetailsPage({ params }: GameDetailsPageProps) 
               </div>
             </div>
 
-            {/* System Requirements */}
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">System Requirements</h2>
-              <div className="bg-card border border-border rounded-lg p-4 sm:p-6 space-y-3 sm:space-y-4">
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Operating System</h3>
-                  <p className="text-muted-foreground text-sm sm:text-base">{game.systemRequirements.os}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Processor</h3>
-                  <p className="text-muted-foreground text-sm sm:text-base">{game.systemRequirements.processor}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Memory (RAM)</h3>
-                  <p className="text-muted-foreground text-sm sm:text-base">{game.systemRequirements.memory}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Storage</h3>
-                  <p className="text-muted-foreground text-sm sm:text-base">{game.systemRequirements.storage}</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Sidebar */}

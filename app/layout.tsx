@@ -8,30 +8,30 @@ const geistSans = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Free Game Download - Play Now | CPA Gaming",
+  title: "Free Game & App Mods - Download Modded Games & Apps | freemods4u",
   description:
-    "Download our free game instantly. No ads, no hidden fees. Join thousands of players enjoying premium gaming. Click to download now!",
-  keywords: "free game download, mobile game, gaming app, play free games",
-  metadataBase: new URL("https://cpa-game-landing.vercel.app"),
+    "Download free modded games and apps with premium features unlocked. Get unlimited coins, unlocked levels, no ads, and more. Safe and verified mods for Android & iOS.",
+  keywords: "free game mods, modded apps, apk mods, game mods, app mods, premium mods, free mods, unlocked games",
+  metadataBase: new URL("https://freemods4u.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cpa-game-landing.vercel.app",
-    title: "Free Game Download - Play Now | CPA Gaming",
-    description: "Download our free game instantly. No ads, no hidden fees. Join thousands of players.",
+    url: "https://freemods4u.com",
+    title: "Free Game & App Mods - Download Modded Games & Apps | freemods4u",
+    description: "Download free modded games and apps with premium features unlocked. Safe and verified mods for Android & iOS.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CPA Game Landing Page",
+        alt: "freemods4u - Free Game & App Mods",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Game Download - Play Now | CPA Gaming",
-    description: "Download our free game instantly. No ads, no hidden fees.",
+    title: "Free Game & App Mods - Download Modded Games & Apps | freemods4u",
+    description: "Download free modded games and apps with premium features unlocked. Safe and verified mods.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://cpa-game-landing.vercel.app",
+    canonical: "https://freemods4u.com",
   },
     generator: 'v0.app'
 }
@@ -65,9 +65,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "CPA Game",
-              description: "Free game download platform",
-              url: "https://cpa-game-landing.vercel.app",
+              name: "freemods4u",
+              description: "Free game and app mods platform - Download modded games and apps with premium features unlocked",
+              url: "https://freemods4u.com",
               applicationCategory: "GameApplication",
               offers: {
                 "@type": "Offer",

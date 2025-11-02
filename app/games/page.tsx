@@ -5,13 +5,13 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Games Gallery - Browse All Games | CPA Gaming",
+  title: "Modded Games - Free Game Mods Download | freemods4u",
   description:
-    "Explore our collection of premium games. Find your next favorite game from RPG, Action, Puzzle, Adventure, Strategy, and Racing genres.",
-  keywords: "game gallery, browse games, game collection, free games, premium games",
+    "Explore our collection of free modded games with premium features unlocked. Download modded RPG, Action, Puzzle, Adventure, Strategy, and Racing games.",
+  keywords: "modded games, game mods, free game mods, apk mods, unlocked games, premium game mods",
   openGraph: {
-    title: "Games Gallery - Browse All Games | CPA Gaming",
-    description: "Explore our collection of premium games across multiple genres.",
+    title: "Modded Games - Free Game Mods Download | freemods4u",
+    description: "Explore our collection of free modded games with premium features unlocked across multiple genres.",
     type: "website",
   },
 }
@@ -24,22 +24,21 @@ export default function GamesPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20 px-4 md:px-6 lg:px-8 border-b border-border">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Discover Our Game Collection
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
+            Free Modded Games Collection
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl text-balance">
-            Browse through our curated selection of premium games across multiple genres. Find your next favorite game
-            and start playing today.
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl text-balance">
+            Browse through our curated selection of free modded games with premium features unlocked. Get unlimited coins, unlocked levels, no ads, and more across multiple genres.
           </p>
         </div>
       </section>
 
       {/* Games Grid */}
-      <section className="py-12 md:py-20 px-4 md:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {games.map((game) => (
               <GameCard key={game.id} game={game} />
             ))}

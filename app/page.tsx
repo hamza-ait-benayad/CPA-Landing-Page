@@ -10,9 +10,9 @@ import Footer from "@/components/footer"
 import Navigation from "@/components/navigation"
 
 export const metadata: Metadata = {
-  title: "Free Game Download - Play Now | CPA Gaming",
+  title: "Free Game & App Mods - Download Modded Games & Apps | freemods4u",
   description:
-    "Download our free game instantly. No ads, no hidden fees. Join thousands of players enjoying premium gaming.",
+    "Download free modded games and apps with premium features unlocked. Get unlimited coins, unlocked levels, no ads, and more. Safe and verified mods for Android & iOS.",
 }
 
 export default function Home() {
