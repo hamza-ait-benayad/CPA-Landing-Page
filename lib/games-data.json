@@ -10,7 +10,7 @@
     "reviews": 12000,
     "features": ["Custom Avatars", "Cross-Platform", "Community Games", "Premium Tools"],
     "downloadUrl": "https://www.mediafire.com/file/evupwk5is1tz5zn/Roblox_v2.693.960.xapk/file",
-    "screenshots": [],
+    "screenshots": ["https://modyolo.com/wp-content/uploads/2022/11/roblox-1.png","https://modyolo.com/wp-content/uploads/2022/11/roblox-2.png"],
     "heroImage": "",
     "systemRequirements": {
       "os": "Android 8.0+, iOS 13+",
@@ -33,7 +33,7 @@
     "reviews": 8500,
     "features": ["Unlimited Rolls", "Online Multiplayer", "Fast Gameplay", "Custom Boards"],
     "downloadUrl": "https://www.mediafire.com/file/yqkoabueysyc9mx/Monopoly__v1.15.4__MOD.apk/file",
-    "screenshots": [],
+    "screenshots": ["https://modyolo.com/wp-content/uploads/2021/09/monopoly-board-game-classic-about-real-estate-3.jpg","https://modyolo.com/wp-content/uploads/2021/09/monopoly-board-game-classic-about-real-estate-4.jpg"],
     "heroImage": "",
     "systemRequirements": {
       "os": "Android 7.0+, iOS 12+",
@@ -56,7 +56,7 @@
     "reviews": 9700,
     "features": ["Unlimited Boosters", "Offline Play", "Colorful Levels", "No Ads"],
     "downloadUrl": "https://www.mediafire.com/file/ks9ilkj2x2pis24/Royal_Match_v31521_MOD.apk/file",
-    "screenshots": [],
+    "screenshots": ["https://modyolo.com/wp-content/uploads/2021/09/royal-match-3.jpg","https://modyolo.com/wp-content/uploads/2021/09/royal-match-4.jpg"],
     "heroImage": "",
     "systemRequirements": {
       "os": "Android 6.0+, iOS 11+",
@@ -79,7 +79,7 @@
     "reviews": 6200,
     "features": ["Unlimited Cash", "Farm Management", "Building System", "Offline Mode"],
     "downloadUrl": "https://www.mediafire.com/file/c92o0krw4i6mphu/Township__v30.0.1__MOD.apk/file",
-    "screenshots": [],
+    "screenshots": ["https://modyolo.com/wp-content/uploads/2021/09/township-2.jpg","https://modyolo.com/wp-content/uploads/2021/09/township-6.jpg"],
     "heroImage": "",
     "systemRequirements": {
       "os": "Android 7.0+, iOS 12+",
@@ -102,7 +102,7 @@
     "reviews": 15000,
     "features": ["Unlimited Diamonds", "ESP Hack", "Aimbot Menu", "Custom Skins"],
     "downloadUrl": "https://www.mediafire.com/file/tfb26k2fnc4ttbm/Garena_Free_Fire_+v1.114.1+_MOD.xapk/file",
-    "screenshots": [],
+    "screenshots": ["https://modyolo.com/wp-content/uploads/2021/09/garena-free-fire-4nniversary-4.jpg","https://modyolo.com/wp-content/uploads/2021/09/garena-free-fire-4nniversary-5.jpg"],
     "heroImage": "",
     "systemRequirements": {
       "os": "Android 8.0+, iOS 13+",
@@ -113,5 +113,28 @@
     "releaseDate": "2024-05-01",
     "developer": "Garena",
     "publisher": "Garena"
+  },
+  {
+    "id": "Coin Master",
+    "title": "Coin Master v3.5.2310 MOD APK (Unlimited Cards, Unlocked)",
+    "shortDescription": "Get unlimited coins and card.",
+    "description": "Coin Master Mod Apk help you get unlimited coins and cards in this popular mobile game.You can easily build your own villages and raid other players’ villages to earn coins and progress through levels",
+    "thumbnail": "https://modyolo.com/wp-content/uploads/2021/10/coin-master-apk-150x150.png",
+    "genre": "Casual",
+    "rating": 4.8,
+    "reviews": 15000,
+    "features": ["Unlimited Coins", "Unlimited cards"],
+    "downloadUrl": "https://www.mediafire.com/file/iw7owowderbnkqq/Coin_Master_+v3.5.2310+x.apk/file",
+    "screenshots": ["https://modyolo.com/wp-content/uploads/2021/09/coin-master-2.jpg","https://modyolo.com/wp-content/uploads/2021/09/coin-master-3.jpg"],
+    "heroImage": "",
+    "systemRequirements": {
+      "os": "Android 8.0+, iOS 13+",
+      "processor": "Octa-Core 2.2GHz",
+      "memory": "4GB RAM",
+      "storage": "74M"
+    },
+    "releaseDate": "2024-05-01",
+    "developer": "Moon Active",
+    "publisher": "Moon Active"
   }
 ]
