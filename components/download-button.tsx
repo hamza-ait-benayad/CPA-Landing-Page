@@ -26,11 +26,6 @@ export default function DownloadButton({
 
     console.log("Download button clicked", { downloadUrl, gameId, appId, title })
 
-    // Redirect to content locker
-    window.location.href = "https://content-unlock.com/?0fdd58f"
-    
-    // Original logic commented out
-    /*
     // Track analytics if available
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "cpa_click", {
@@ -39,7 +34,7 @@ export default function DownloadButton({
       })
     }
 
-    // Trigger OGAds content locker
+    // Trigger content locker
     try {
       triggerOGAdsLocker(downloadUrl, {
         gameId,
@@ -51,7 +46,6 @@ export default function DownloadButton({
       // Fallback: redirect directly if trigger fails
       window.location.href = downloadUrl
     }
-    */
   }
 
   const baseStyles = "font-semibold transition-colors flex items-center justify-center gap-2"

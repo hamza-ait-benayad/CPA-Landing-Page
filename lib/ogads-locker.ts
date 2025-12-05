@@ -16,42 +16,14 @@ let old_display: string | undefined = undefined
 let redirectHandler: NodeJS.Timeout | null = null
 
 /**
- * Load locker content from OGAds API
+ * Load locker content
  */
 function og_load(options?: Record<string, string>): Promise<void> {
   return new Promise((resolve, reject) => {
-    let locker_url = "https://lockverify.org/cl/v/9vqd5r"
-
-    if (options) {
-      const query_vars = Object.keys(options)
-        .map(function (key) {
-          return encodeURIComponent(key) + "=" + encodeURIComponent(options[key])
-        })
-        .join("&")
-      locker_url += "?" + query_vars
-    }
-
-    // Preload content
-    const xhr = new XMLHttpRequest()
-    xhr.open("GET", locker_url, true)
-    xhr.onreadystatechange = function () {
-      if (this.readyState !== 4) {
-        return
-      }
-      if (this.status !== 200) {
-        iframecontents = false
-        reject(new Error("Failed to load locker content"))
-        return
-      }
-      iframecontents = this.responseText
-      ogEditBody()
-      resolve()
-    }
-    xhr.onerror = () => {
-      iframecontents = false
-      reject(new Error("Network error loading locker"))
-    }
-    xhr.send()
+    // We don't need to load content via XHR anymore, we'll just set the iframe src
+    iframecontents = "true" // Signal that we are ready
+    ogEditBody()
+    resolve()
   })
 }
 
@@ -67,7 +39,7 @@ function ogEditBody() {
 
   const old_overflow = body.style.overflow
   old_display = body.style.display || ""
-  body.style.display = "none"
+  // body.style.display = "none" // Don't hide body, just overlay
 
   ogMakeLocker()
 }
@@ -84,7 +56,7 @@ function ogMakeLocker() {
 
   if (body === undefined || body === null) return
 
-  body.style.display = old_display || ""
+  // body.style.display = old_display || ""
 
   if (iframecontents !== false) {
     // Remove existing iframe if any
@@ -103,20 +75,16 @@ function ogMakeLocker() {
     iframe.style.position = "fixed"
     iframe.style.top = "0"
     iframe.style.left = "0"
-    iframe.style.zIndex = "16777271"
+    iframe.style.zIndex = "2147483647" // Max z-index
     iframe.id = "ogads_locker_iframe"
+
+    // Set the source directly
+    iframe.src = "https://content-unlock.com/?0fdd58f"
 
     body.appendChild(iframe)
 
-    const loadedIframe = document.getElementById("ogads_locker_iframe") as HTMLIFrameElement
-    if (loadedIframe && loadedIframe.contentDocument) {
-      loadedIframe.contentDocument.open()
-      loadedIframe.contentDocument.write(iframecontents as string)
-      loadedIframe.contentDocument.close()
-
-      // Setup unlock detection
-      setupUnlockDetection()
-    }
+    // Setup unlock detection
+    setupUnlockDetection()
   }
 }
 
@@ -129,7 +97,30 @@ function setupUnlockDetection() {
     clearInterval(redirectHandler)
   }
 
-  // Check periodically if locker iframe is removed or unlocked
+  // Listen for completion message from iframe
+  const messageHandler = (event: MessageEvent) => {
+    // You might want to check event.origin here for security
+    // if (event.origin !== "https://content-unlock.com") return;
+
+    console.log("Received message from locker:", event.data);
+
+    // Check for specific completion message if known, otherwise assume any message from locker might be relevant
+    // For now, we'll accept "CPABuildComplete" or similar common signals, or just proceed if we get a specific signal
+    // Adjust this based on what content-unlock.com actually sends
+    if (event.data === "CPABuildComplete" || event.data === "offer_complete") {
+      const downloadUrl = sessionStorage.getItem("ogads_download_url")
+      if (downloadUrl) {
+        sessionStorage.removeItem("ogads_download_url")
+        window.removeEventListener("message", messageHandler)
+        removeOGAdsLocker()
+        window.location.href = downloadUrl
+      }
+    }
+  }
+
+  window.addEventListener("message", messageHandler)
+
+  // Also keep the interval check just in case the iframe is removed manually
   redirectHandler = setInterval(() => {
     const iframe = document.getElementById("ogads_locker_iframe")
     const downloadUrl = sessionStorage.getItem("ogads_download_url")
@@ -141,29 +132,14 @@ function setupUnlockDetection() {
         clearInterval(redirectHandler)
         redirectHandler = null
       }
+      window.removeEventListener("message", messageHandler)
 
       // Small delay before redirect
       setTimeout(() => {
         window.location.href = downloadUrl
       }, 300)
     }
-
-    // Alternative: check for unlock message or cookie
-    try {
-      const iframeElement = document.getElementById("ogads_locker_iframe") as HTMLIFrameElement
-      if (iframeElement?.contentWindow) {
-        try {
-          // Try to detect if locker sends unlock message
-          const iframeDoc = iframeElement.contentDocument || iframeElement.contentWindow.document
-          // If we can access the document, locker might be unlocked
-        } catch (e) {
-          // Cross-origin, can't access - this is normal
-        }
-      }
-    } catch (e) {
-      // Ignore cross-origin errors
-    }
-  }, 500)
+  }, 1000)
 
   // Clear after 10 minutes to prevent memory leaks
   setTimeout(() => {
@@ -171,6 +147,7 @@ function setupUnlockDetection() {
       clearInterval(redirectHandler)
       redirectHandler = null
     }
+    window.removeEventListener("message", messageHandler)
   }, 600000)
 }
 
@@ -225,7 +202,7 @@ export function triggerOGAdsLocker(
 
   // Load and show the locker
   og_load(lockerOptions).catch((error) => {
-    console.error("Failed to load OGAds locker:", error)
+    console.error("Failed to load locker:", error)
     // If locker fails to load, redirect directly after delay
     setTimeout(() => {
       window.location.href = downloadUrl
