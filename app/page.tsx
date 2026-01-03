@@ -10,9 +10,9 @@ import Footer from "@/components/footer"
 import Navigation from "@/components/navigation"
 
 export const metadata: Metadata = {
-  title: "Free Game & App Mods - Download Modded Games & Apps | freemods4u",
+  title: "Free Rewards Hub - Unlock Game & App Rewards | freemods4u",
   description:
-    "Download free modded games and apps with premium features unlocked. Get unlimited coins, unlocked levels, no ads, and more. Safe and verified mods for Android & iOS.",
+    "Unlock game and app rewards through quick, verified offers. Choose a title, complete a short verification step, and get access instantly. Mobile-friendly and updated daily.",
 }
 
 export default function Home() {

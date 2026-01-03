@@ -35,12 +35,11 @@ export default function Hero() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-balance leading-tight">
-                Free <span className="gradient-accent bg-clip-text text-transparent">Game & App Mods</span>
+                Free <span className="gradient-accent bg-clip-text text-transparent">Rewards Hub</span>
               </h1>
 
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                Download free modded games and apps with premium features unlocked. Get unlimited coins, unlocked levels, no ads, and more. All mods are safe, verified, and completely free.
-              </p>
+                Unlock game & app rewards through quick, verified offers. Choose a title, complete a short step, and get access instantly.</p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center lg:justify-start">
                 <Link href="/games" className="w-full sm:w-auto">
@@ -48,7 +47,7 @@ export default function Hero() {
                     size="lg"
                     className="bg-primary hover:bg-primary-dark text-background font-bold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full neon-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
-                    Browse All Games
+                    Get Free Access
                   </Button>
                 </Link>
                 <Link href="/apps" className="w-full sm:w-auto">
@@ -57,7 +56,7 @@ export default function Hero() {
                     size="lg"
                     className="border-primary text-primary hover:bg-primary/10 font-bold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full bg-transparent w-full sm:w-auto"
                   >
-                    Browse All Apps
+                    See Rewards
                   </Button>
                 </Link>
               </div>

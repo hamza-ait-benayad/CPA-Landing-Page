@@ -13,7 +13,7 @@ export default function FeaturedApps() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
-            Featured <span className="gradient-accent bg-clip-text text-transparent">Modded Apps</span>
+            Featured <span className="gradient-accent bg-clip-text text-transparent">Bonus Apps</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto text-balance px-4">
             Discover our most popular modded apps with premium features unlocked. Get premium subscriptions, unlocked features, and no ads.

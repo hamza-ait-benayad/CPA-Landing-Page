@@ -8,11 +8,23 @@
     "category": "Photo & Video",
     "rating": 4.8,
     "reviews": 5420,
-    "features": ["AI Filters", "Advanced Tools", "Cloud Sync", "No Watermarks"],
+    "features": [
+      "AI Filters",
+      "Advanced Tools",
+      "Cloud Sync",
+      "No Watermarks"
+    ],
     "downloadUrl": "#download",
-    "screenshots": ["/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000"],
+    "screenshots": [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000"
+    ],
     "heroImage": "/placeholder.svg?height=800&width=1600",
-    "platform": ["iOS", "Android"],
+    "platform": [
+      "iOS",
+      "Android"
+    ],
     "releaseDate": "2024-01-10",
     "developer": "Pixel Perfect",
     "publisher": "Creative Apps"
@@ -26,11 +38,24 @@
     "category": "Health & Fitness",
     "rating": 4.6,
     "reviews": 3892,
-    "features": ["Workout Plans", "Health Metrics", "Social Sharing", "Wearable Sync"],
+    "features": [
+      "Workout Plans",
+      "Health Metrics",
+      "Social Sharing",
+      "Wearable Sync"
+    ],
     "downloadUrl": "#download",
-    "screenshots": ["/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000"],
+    "screenshots": [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000"
+    ],
     "heroImage": "/placeholder.svg?height=800&width=1600",
-    "platform": ["iOS", "Android", "Web"],
+    "platform": [
+      "iOS",
+      "Android",
+      "Web"
+    ],
     "releaseDate": "2023-12-05",
     "developer": "Health Tech Inc",
     "publisher": "Wellness Apps"
@@ -44,11 +69,25 @@
     "category": "Music & Audio",
     "rating": 4.7,
     "reviews": 12543,
-    "features": ["Offline Mode", "Curated Playlists", "High Quality Audio", "No Ads"],
+    "features": [
+      "Offline Mode",
+      "Curated Playlists",
+      "High Quality Audio",
+      "fewer ads"
+    ],
     "downloadUrl": "#download",
-    "screenshots": ["/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000"],
+    "screenshots": [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000"
+    ],
     "heroImage": "/placeholder.svg?height=800&width=1600",
-    "platform": ["iOS", "Android", "Web", "Desktop"],
+    "platform": [
+      "iOS",
+      "Android",
+      "Web",
+      "Desktop"
+    ],
     "releaseDate": "2024-02-15",
     "developer": "Audio Labs",
     "publisher": "Stream Services"
@@ -62,11 +101,26 @@
     "category": "Productivity",
     "rating": 4.9,
     "reviews": 6789,
-    "features": ["Task Management", "Note Taking", "Calendar", "File Sync"],
+    "features": [
+      "Task Management",
+      "Note Taking",
+      "Calendar",
+      "File Sync"
+    ],
     "downloadUrl": "#download",
-    "screenshots": ["/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000"],
+    "screenshots": [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000"
+    ],
     "heroImage": "/placeholder.svg?height=800&width=1600",
-    "platform": ["iOS", "Android", "Web", "macOS", "Windows"],
+    "platform": [
+      "iOS",
+      "Android",
+      "Web",
+      "macOS",
+      "Windows"
+    ],
     "releaseDate": "2023-11-20",
     "developer": "Productivity Co",
     "publisher": "Business Tools"
@@ -80,11 +134,24 @@
     "category": "Education",
     "rating": 4.8,
     "reviews": 9567,
-    "features": ["AI Tutoring", "30+ Languages", "Speech Recognition", "Progress Tracking"],
+    "features": [
+      "AI Tutoring",
+      "30+ Languages",
+      "Speech Recognition",
+      "Progress Tracking"
+    ],
     "downloadUrl": "#download",
-    "screenshots": ["/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000"],
+    "screenshots": [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000"
+    ],
     "heroImage": "/placeholder.svg?height=800&width=1600",
-    "platform": ["iOS", "Android", "Web"],
+    "platform": [
+      "iOS",
+      "Android",
+      "Web"
+    ],
     "releaseDate": "2024-03-01",
     "developer": "Learn Tech",
     "publisher": "Education Apps"
@@ -98,14 +165,25 @@
     "category": "Weather",
     "rating": 4.5,
     "reviews": 2341,
-    "features": ["Hyper-Local", "Severe Alerts", "Radar Maps", "Widget Support"],
+    "features": [
+      "Hyper-Local",
+      "Severe Alerts",
+      "Radar Maps",
+      "Widget Support"
+    ],
     "downloadUrl": "#download",
-    "screenshots": ["/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000", "/placeholder.svg?height=600&width=1000"],
+    "screenshots": [
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000",
+      "/placeholder.svg?height=600&width=1000"
+    ],
     "heroImage": "/placeholder.svg?height=800&width=1600",
-    "platform": ["iOS", "Android"],
+    "platform": [
+      "iOS",
+      "Android"
+    ],
     "releaseDate": "2023-10-15",
     "developer": "Weather Systems",
     "publisher": "Utility Apps"
   }
 ]
-

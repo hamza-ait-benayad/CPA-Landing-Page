@@ -13,7 +13,7 @@ export default function FeaturedGames() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
-            Featured <span className="gradient-accent bg-clip-text text-transparent">Modded Games</span>
+            Featured <span className="gradient-accent bg-clip-text text-transparent">Reward Packs</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto text-balance px-4">
             Discover our most popular modded games with premium features unlocked. Get unlimited coins, unlocked levels, and no ads.

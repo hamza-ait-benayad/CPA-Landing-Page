@@ -8,7 +8,7 @@ export default function HowItWorks() {
     },
     {
       number: "02",
-      title: "Verify & Install",
+      title: "Complete Verification",
       description: "Complete quick verification and install the modded game or app",
       icon: "✅",
     },

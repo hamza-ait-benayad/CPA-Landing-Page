@@ -6,15 +6,15 @@ import { ChevronDown } from "lucide-react"
 const faqs = [
   {
     id: 1,
-    question: "Are the modded games and apps really free?",
+    question: "Is the rewards hub really free?",
     answer:
-      "Yes! All modded games and apps on freemods4u are completely free to download. There are no hidden fees, subscriptions, or premium paywalls. We provide modded versions with premium features unlocked at no cost.",
+      "Yes. Access is free — you unlock it by completing a short verification offer (e.g., app install, survey, or trial) depending on your country/device.",
   },
   {
     id: 2,
-    question: "Is it safe to download modded games and apps?",
+    question: "Is it safe to use?",
     answer:
-      "Absolutely. All mods on freemods4u are 100% safe and verified. We use industry-standard security protocols and regularly scan all files for malware. Your data and device are completely protected.",
+      "We only list offers from reputable partners. Always read the offer details before completing, and never share sensitive information outside the partner’s secure flow. We use industry-standard security protocols and regularly scan all files for malware. Your data and device are completely protected.",
   },
   {
     id: 3,
